@@ -1,0 +1,74 @@
+# Sentiment Analysis Using R
+
+This repository contains a polished Shiny dashboard for sentiment analysis using the R programming language.
+
+## Features
+
+- Upload or paste textual data
+- Clean and preprocess text automatically
+- Generate a word cloud
+- Find the most frequent terms
+- Compute sentiment using the Syuzhet, Bing, or Afinn lexicons
+- Explore NRC emotion counts
+- Visualize sentiment distribution and summary metrics
+
+## Project structure
+
+```text
+.
+├── app.R
+├── README.md
+├── data/
+│   └── sample_reviews.txt
+├── output/
+│   └── .gitkeep
+├── .gitignore
+└── sentimentAnalysisUsingR.Rproj
+```
+
+## Prerequisites
+
+Install the following in R or RStudio:
+
+```r
+install.packages(c("shiny", "tm", "SnowballC", "wordcloud", "RColorBrewer", "syuzhet", "ggplot2", "dplyr"))
+```
+
+## Run the dashboard
+
+From the project root, launch the app:
+
+```bash
+Rscript -e "shiny::runApp('app.R')"
+```
+
+Or open the project in RStudio and run `app.R`.
+
+## Input options
+
+The dashboard supports:
+
+1. a built-in sample dataset
+2. an uploaded `.txt`, `.csv`, or `.tsv` file
+3. pasted text directly into the interface
+
+## Output
+
+The dashboard presents:
+
+- overview metrics
+- top word frequency tables
+- word cloud visualizations
+- histogram of sentiment scores
+- emotion counts grouped by NRC categories
+- sentiment summary table
+
+## Notes
+
+This dashboard is designed as a user-friendly version of the original sentiment analysis project and is a strong base for future enhancements such as:
+
+- CSV export
+- date-based trends
+- user-defined stopwords
+- interactive filtering
+- deployment to shinyapps.io or Posit Connect
